@@ -1,0 +1,433 @@
+.calculator-wrapper {
+  width: min(700px, calc(100% - 32px));
+  margin: 40px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, sans-serif;
+  color: #111827;
+}
+
+.calculator-title {
+  margin: 0 0 28px;
+  font-size: 26px;
+  text-align: center;
+  color: #111827;
+}
+
+/*заголовки разделов*/
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 19px;
+  color: #111827;
+}
+
+.products-section {
+  margin-bottom: 24px;
+}
+
+
+/*карточка товара*/
+
+.product-card {
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.remove-product {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.remove-product:hover {
+  background: #fecaca;
+}
+
+/*поля*/
+
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field__label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.field__input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 2px solid #d0d5dd;
+  border-radius: 8px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  font-family: inherit;
+  background: #ffffff;
+  color: #111827;
+}
+
+.field__input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.field__input--error {
+  border-color: #ef4444;
+}
+
+.field__select {
+  cursor: pointer;
+  appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4l3 3 3-3' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+
+  padding-right: 32px;
+}
+
+/*добавить товар*/
+
+.add-product {
+  width: 100%;
+  padding: 11px;
+  border: 2px dashed #93c5fd;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-product:hover {
+  background: #dbeafe;
+}
+
+/*промокод*/
+
+.promo-success {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #16a34a;
+}
+
+.promo-info {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/*ручная скидка*/
+
+.custom-discount {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.range-row input[type="range"] {
+  flex: 1;
+  cursor: pointer;
+}
+
+.range-row input[type="range"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.range-value {
+  min-width: 45px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+
+/*НДС*/
+
+.vat-section {
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+/*ошибка*/
+
+.field__error {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #ef4444;
+}
+
+/*кнопки*/
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn--primary {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: #2563eb;
+}
+
+.btn--primary:active {
+  background: #1d4ed8;
+}
+
+.btn--secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn--secondary:hover {
+  background: #e5e7eb;
+}
+
+/*результаты*/
+
+.results {
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.results__title {
+  margin: 16px 0;
+  font-size: 19px;
+  color: #111827;
+}
+
+/*результат отдельного товара*/
+
+.product-results {
+  margin-bottom: 20px;
+}
+
+.result-product {
+  margin-bottom: 12px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.result-product__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.result-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.result-line span:first-child {
+  color: #6b7280;
+}
+
+.result-line--final {
+  margin-top: 4px;
+  border-bottom: none;
+  font-weight: 700;
+}
+
+.discount-value {
+  color: #ef4444;
+}
+
+
+/*общая таблица*/
+
+.results__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.results__table td {
+  padding: 9px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.results__table td:first-child {
+  color: #6b7280;
+}
+
+.results__value {
+  text-align: right;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.results__value--discount {
+  color: #ef4444;
+}
+
+.results__row--total td {
+  padding-top: 14px;
+  border-top: 2px solid #111827;
+  border-bottom: none;
+  font-size: 17px;
+}
+
+.results__row--total td:first-child {
+  color: #111827;
+  font-weight: 700;
+}
+
+.results__row--total .results__value {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+
+/*история*/
+
+.history {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.history__title {
+  margin: 0 0 15px;
+  font-size: 19px;
+  color: #111827;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.history-item strong {
+  color: #111827;
+}
+
+.history-date {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.history-total {
+  color: #2563eb !important;
+  white-space: nowrap;
+}
+
+/*адаптация под телефон */
+
+@media (max-width: 600px) {
+  .calculator-wrapper {
+    width: calc(100% - 20px);
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .calculator-title {
+    font-size: 22px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .history-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .history-total {
+    align-self: flex-end;
+  }
+}
